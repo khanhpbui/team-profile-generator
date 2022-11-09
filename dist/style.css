@@ -1,0 +1,28 @@
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 5%;
+  color: var(--dark-tan);
+}
+:root {
+  --tan: rgba(175, 150, 118, 0.551);
+  --dark-tan: rgb(86, 66, 61);
+  --light-tan: rgba(240, 233, 225, 0.551);
+  --white: #f0f8ff;
+}
+h1 {
+  background-color: var(--tan);
+  margin: 2%;
+  padding: 2%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+
+
+footer {
+    font-style: italic;
+    font-size: .75rem;
+    text-align: center;
+    background-color: var(--light-tan);
+    margin: 2%;
+}
