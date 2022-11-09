@@ -60,7 +60,11 @@ function addMoreEmployee() {
         typeofEmployee();
       } else {
         const html = getHtml();
-        fs.writeFile('./dist/my-team.html', html, err => err ? console.log(err) : console.log('Your team profile has been created'));
+        fs.writeFile("./dist/my-team.html", html, (err) =>
+          err
+            ? console.log(err)
+            : console.log("Your team profile has been created")
+        );
       }
       console.log(res);
     })
@@ -174,39 +178,43 @@ function getEmployeeHtml() {
   for (let i = 0; i < employeeList.length; i++) {
     if (employeeList[i].getRole() === "Manager") {
       console.log("Manager");
-      let htmlManager = `<div class="manager">
-        <h2>${employeeList[i].getName()}<br>
+      let htmlManager = `<div class="employee card g-col-3 g-col-md-3 shadow p-3 mb-5 bg-body rounded"  style="width: 25rem;">
+        <h2 class="card-header">${employeeList[i].getName()}<br>
         <i class="fa-solid fa-user-tie"></i>${employeeList[i].getRole()}</h2>
-        <div>
-          <p>ID: ${employeeList[i].getId()}</p>
-          <p>Email: ${employeeList[i].getEmail()}</p>
-          <p>Office number: ${employeeList[i].getOfficeNumber()}</p>
-        </div>
+        <ul class="info list-group list-group-flush">
+          <li class="list-group-item">ID: ${employeeList[i].getId()}</li>
+          <li class="list-group-item">Email: ${employeeList[i].getEmail()}</li>
+          <li class="list-group-item">Office number:  ${employeeList[
+            i
+          ].getOfficeNumber()}</li>
+        </ul>
       </div>`;
       employee.push(htmlManager);
     } else if (employeeList[i].getRole() === "Engineer") {
       console.log("Engineer");
-      let htmlEngineer = `<div class="engineer">
-        <h2>${employeeList[i].getName()}<br>
+      let htmlEngineer = `<div class="employee card g-col-3 g-col-md-3 shadow p-3 mb-5 bg-body rounded"  style="width: 25rem;">
+      <h2 class="card-header">${employeeList[i].getName()}<br>
         <i class="fa-solid fa-gear"></i>${employeeList[i].getRole()}</h2>
-        <div>
-          <p>ID: ${employeeList[i].getId()}</p>
-          <p>Email: ${employeeList[i].getEmail()}</p>
-          <p>Github: ${employeeList[i].getGithub()}</p>
-        </div>
-      </div>`;
+      <ul class="info list-group list-group-flush">
+        <li class="list-group-item">ID: ${employeeList[i].getId()}</li>
+        <li class="list-group-item">Email: ${employeeList[i].getEmail()}</li>
+        <li class="list-group-item">Github: ${employeeList[i].getGithub()}</li>
+      </ul>
+    </div>`;
       employee.push(htmlEngineer);
     } else {
       console.log("Intern");
-      let htmlIntern = `<div class="intern">
-        <h2>${employeeList[i].getName()}<br>
-        <i class="fa-solid fa-child-reaching"></i>${employeeList[i].getRole()}</h2>
-        <div>
-          <p>ID: ${employeeList[i].getId()}</p>
-          <p>Email: ${employeeList[i].getEmail()}</p>
-          <p>School: ${employeeList[i].getSchool()}</p>
-        </div>
-      </div>`;
+      let htmlIntern = `<div class="employee card g-col-3 g-col-md-3 shadow p-3 mb-5 bg-body rounded"  style="width: 25rem;">
+      <h2 class="card-header">${employeeList[i].getName()}<br>
+        <i class="fa-solid fa-child-reaching"></i>${employeeList[
+          i
+        ].getRole()}</h2>
+      <ul class="info list-group list-group-flush">
+        <li class="list-group-item">ID: ${employeeList[i].getId()}</li>
+        <li class="list-group-item">Email: ${employeeList[i].getEmail()}</li>
+        <li class="list-group-item">School: ${employeeList[i].getSchool()}</li>
+      </ul>
+    </div>`;
       employee.push(htmlIntern);
     }
   }
@@ -235,10 +243,10 @@ function getHtml() {
       </head>
       <body>
         <header>
-          <h1>My Team</h1>
+        <h1 class="display-1">Meet My Team</h1>
         </header>
         <main>
-          <div class="team-members">${employeeHtml}</div>
+          <div class="team-members d-flex justify-content-sm-evenly align-items-stretch flex-wrap grid">${employeeHtml}</div>
         </main>
         <footer>&copy Khanh Bui 2022</footer>
       </body>

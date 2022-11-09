@@ -15,36 +15,36 @@
   </head>
   <body>
     <header>
-      <h1>My Team</h1>
+      <h1 class="display-1">Meet My Team</h1>
     </header>
     <main>
-      <div class="team-members">
-        <div class="manager">
-          <h2>name<br>
-            <i class="fa-solid fa-mug-hot"></i>role</h2>
-          <div>
-            <p>ID:</p>
-            <p>Email:</p>
-            <p>Office number:</p>
-          </div>
+      <div class="team-members d-flex justify-content-sm-evenly align-items-stretch flex-wrap grid">
+        <div class="employee card g-col-3 g-col-md-3 shadow p-3 mb-5 bg-body rounded"  style="width: 25rem;">
+          <h2 class="card-header">${employeeList[i].getName()}<br>
+            <i class="fa-solid fa-mug-hot"></i>${employeeList[i].getRole()}</h2>
+          <ul class="info list-group list-group-flush">
+            <li class="list-group-item">ID: ${employeeList[i].getId()}</li>
+            <li class="list-group-item">Email: ${employeeList[i].getEmail()}</li>
+            <li class="list-group-item">Office number:  ${employeeList[i].getOfficeNumber()}</li>
+          </ul>
         </div>
-        <div class="engineer">
-          <h2>name<br>
-            <i class="fa-solid fa-gear"></i>role</h2>
-          <div>
-            <p>ID:</p>
-            <p>Email:</p>
-            <p>Github:</p>
-          </div>
+        <div class="employee card g-col-3 g-col-md-3 shadow p-3 mb-5 bg-body rounded"  style="width: 25rem;">
+          <h2 class="card-header">${employeeList[i].getName()}<br>
+            <i class="fa-solid fa-gear"></i>${employeeList[i].getRole()}</h2>
+          <ul class="info list-group list-group-flush">
+            <li class="list-group-item">ID: ${employeeList[i].getId()}</li>
+            <li class="list-group-item">Email: ${employeeList[i].getEmail()}</li>
+            <li class="list-group-item">Github: ${employeeList[i].getGithub()}</li>
+          </ul>
         </div>
-        <div class="intern">
-          <h2>name<br>
-            <i class="fa-solid fa-child-reaching"></i>role</h2>
-          <div>
-            <p>ID:</p>
-            <p>Email:</p>
-            <p>School:</p>
-          </div>
+        <div class="employee card g-col-3 g-col-md-3 shadow p-3 mb-5 bg-body rounded"  style="width: 25rem;">
+          <h2 class="card-header">${employeeList[i].getName()}<br>
+            <i class="fa-solid fa-child-reaching"></i>${employeeList[i].getRole()}</h2>
+          <ul class="info list-group list-group-flush">
+            <li class="list-group-item">ID: ${employeeList[i].getId()}</li>
+            <li class="list-group-item">Email: ${employeeList[i].getEmail()}</li>
+            <li class="list-group-item">School: ${employeeList[i].getSchool()}</li>
+          </ul>
         </div>
       </div>
     </main>
