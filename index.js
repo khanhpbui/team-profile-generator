@@ -183,10 +183,8 @@ function getEmployeeHtml() {
         <i class="fa-solid fa-user-tie"></i>${employeeList[i].getRole()}</h2>
         <ul class="info list-group list-group-flush">
           <li class="list-group-item">ID: ${employeeList[i].getId()}</li>
-          <li class="list-group-item">Email: ${employeeList[i].getEmail()}</li>
-          <li class="list-group-item">Office number:  ${employeeList[
-            i
-          ].getOfficeNumber()}</li>
+          <li class="list-group-item">Email: <a href="mailto:${employeeList[i].getEmail()}">${employeeList[i].getEmail()}</a></li>
+          <li class="list-group-item">Office number:  ${employeeList[i].getOfficeNumber()}</li>
         </ul>
       </div>`;
       employee.push(htmlManager);
@@ -194,11 +192,11 @@ function getEmployeeHtml() {
       console.log("Engineer");
       let htmlEngineer = `<div class="employee card g-col-3 g-col-md-3 shadow p-3 mb-5 bg-body rounded"  style="width: 25rem;">
       <h2 class="card-header">${employeeList[i].getName()}<br>
-        <i class="fa-solid fa-gear"></i>${employeeList[i].getRole()}</h2>
+      <i class="fa-solid fa-gear"></i>${employeeList[i].getRole()}</h2>
       <ul class="info list-group list-group-flush">
         <li class="list-group-item">ID: ${employeeList[i].getId()}</li>
-        <li class="list-group-item">Email: ${employeeList[i].getEmail()}</li>
-        <li class="list-group-item">Github: ${employeeList[i].getGithub()}</li>
+        <li class="list-group-item">Email: <a href="mailto:${employeeList[i].getEmail()}">${employeeList[i].getEmail()}</a></li>
+        <li class="list-group-item">Github: <a href="https://github.com/${employeeList[i].getGithub()}">https://github.com/${employeeList[i].getGithub()}</a></li>
       </ul>
     </div>`;
       employee.push(htmlEngineer);
@@ -206,12 +204,10 @@ function getEmployeeHtml() {
       console.log("Intern");
       let htmlIntern = `<div class="employee card g-col-3 g-col-md-3 shadow p-3 mb-5 bg-body rounded"  style="width: 25rem;">
       <h2 class="card-header">${employeeList[i].getName()}<br>
-        <i class="fa-solid fa-child-reaching"></i>${employeeList[
-          i
-        ].getRole()}</h2>
+      <i class="fa-solid fa-child-reaching"></i>${employeeList[i].getRole()}</h2>
       <ul class="info list-group list-group-flush">
         <li class="list-group-item">ID: ${employeeList[i].getId()}</li>
-        <li class="list-group-item">Email: ${employeeList[i].getEmail()}</li>
+        <li class="list-group-item">Email: <a href="mailto:${employeeList[i].getEmail()}">${employeeList[i].getEmail()}</a></li>
         <li class="list-group-item">School: ${employeeList[i].getSchool()}</li>
       </ul>
     </div>`;
