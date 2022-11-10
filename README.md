@@ -4,7 +4,7 @@
 ## Description
 
 This application will populate a team profile for the user based on the responses that are received from the prompted questions in the terminal.<br><br>
-![Team Profile Generator](./scr/team-profile-generator.gif)
+![Team Profile Generator](./src/team-profile-generator.gif)
 <br><br>
 Click [HERE](https://drive.google.com/file/d/18Tt-qrgQEsX21YoGwewQhlBbbI9qlcIk/view) to view a full video demonstrating a walkthrough of how to run the application.
     
