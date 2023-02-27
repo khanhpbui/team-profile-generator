@@ -3,15 +3,20 @@
 
 ## Description
 
-This application will populate a team profile for the user based on the responses that are received from the prompted questions in the terminal.<br><br>
+This application will populate a team profile for the user based on the responses that are received from the prompted questions in the terminal.<br>
+Click [HERE](https://drive.google.com/file/d/18Tt-qrgQEsX21YoGwewQhlBbbI9qlcIk/view) to view a full video demonstrating a walkthrough of how to run the application. <br><br>
 ![Team Profile Generator](./src/team-profile-generator.gif)
 <br><br>
-Click [HERE](https://drive.google.com/file/d/18Tt-qrgQEsX21YoGwewQhlBbbI9qlcIk/view) to view a full video demonstrating a walkthrough of how to run the application.
+
+
+<img src="./src/Screenshot_20230227_111259.png" alt="screeenshot" width="600px" height="400px">
+
     
 ## Table of Contents
     
 - [Description](#description)
 - [Installation](#installation)
+- [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [License](#license)
 - [Contribution](#contribution)
@@ -21,11 +26,22 @@ Click [HERE](https://drive.google.com/file/d/18Tt-qrgQEsX21YoGwewQhlBbbI9qlcIk/v
 ## Installation
     
 ```
-npm i inquirer@8.2.4
-
-npm i --save-dev jest
+npm install
 ```
+## Technologies Used
 
+Front End:
+* HTML
+* CSS
+* JavaScript
+* jQuery
+* Bootstrap
+
+Back End:
+* Node.js
+* npm
+* Jest
+* Inquirer
 
 ## Usage
     
@@ -38,11 +54,13 @@ N/A
     
 ## Contribution
     
-N/A
-    
+If you would like to contribute, please contact me at pkkhanhbui@gmail.com.
+
 ## Tests
     
-N/A
+[![badge](https://img.shields.io/badge/tests%20passing-100%25-blue)](https://img.shields.io/badge/tests%20passing-100%25-blue)
+
+ This project was tested with Jest and passed all tests.
     
 ## Questions
     
