@@ -1,5 +1,5 @@
 # Team Profile Generator
- 
+ A CLI-based UI tool for employee managenent created with HTML, CSS, JavaScript, Bootstrap, jQuery, Node.js, and tested with Jest
 
 ## Description
 
